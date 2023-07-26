@@ -1,0 +1,102 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Arabic&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+    <div id="content">
+        <div id="content" class="dataentry">
+            <h1 class="payTitle">فروشندگان</h1>
+            <label>نام</label>
+            <input id="name" type="text" class="inputCode" placeholder="شركت ....">
+            <label>شماره اقتصادي</label>
+            <input id="ecoNumber" type="text" class="inputCode" placeholder="1111111111">
+            <label>شماره ملي</label>
+            <input id="nationNumber" type="text" class="inputCode" placeholder="1111111111">
+            <label>آدرس</label>
+            <input id="address" type="text" class="inputCode" placeholder="تهران ......">
+            <label>كد پستي</label>
+            <input id="postalCode" type="text" class="inputCode" placeholder="1111111111">
+            <label>شناسه يكتا </label>
+            <input id="iecta" type="text" class="inputCode" placeholder="1111111111">
+
+            <button class="submit">ذخيره!</button>
+        </div>
+        <div >
+            <table class="content-table">
+                <thead>
+                    <tr>
+                        <th>نام</th>
+                        <th>شناسه يكتا</th>
+                        <th>شماره ملي</th>
+                        <th>تغيير</th>
+                        <th>حذف</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            شركت 1
+                        </td>
+                        <td>
+                            A111111
+                        </td>
+                        <td>
+                            1234567890
+                        </td>
+                        <td>
+                            <img class="profile-picture" style="cursor: pointer;" src="img/icons8-edit-64.png">
+                        </td>
+                        <td>
+                            <img class="profile-picture" style="cursor: pointer;" src="img/icons8-delete-64.png">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            شركت 2
+                        </td>
+                        <td>
+                            A222222
+                        </td>
+                        <td>
+                            0987654321
+                        </td>
+                        <td>
+                            <img class="profile-picture" style="cursor: pointer;" src="img/icons8-edit-64.png">
+                        </td>
+                        <td>
+                            <img class="profile-picture" style="cursor: pointer;" src="img/icons8-delete-64.png">
+                        </td>
+                    </tr>
+                    <tr class="active-row">
+                        <td>
+                            شركت 3
+                        </td>
+                        <td>
+                            A333333
+                        </td>
+                        <td>
+                            5412369870
+                        </td>
+                        <td>
+                            <img class="profile-picture" style="cursor: pointer;" src="img/icons8-edit-64.png">
+                        </td>
+                        <td>
+                            <img class="profile-picture" style="cursor: pointer;" src="img/icons8-delete-64.png">
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+        </div>
+    </div>
+    <script src="app.js"></script>
+
+</body>
+
+</html>
