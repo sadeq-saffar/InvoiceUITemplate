@@ -13,9 +13,13 @@
         <div id="content" class="dataentry">
             <h1 class="payTitle">صورتحساب</h1>
             <label>تاريخ</label>
-            <input id="date" type="date" class="inputCode" placeholder="">
+            <input id="dateTime" type="date" class="inputCode" placeholder="">
+            <label>تاريخ ايجاد</label>
+            <input id="createDateTime" type="date" class="inputCode" placeholder="">
             <label>شماره </label>
             <input id="no" type="text" class="inputCode" placeholder="">
+            <label>نوع صورتحساب </label>
+            <input id="invoiceType" type="text" class="inputCode" placeholder="">
             <label>فروشنده</label>
             <div>
                 <input id="vendor" type="text" class="inputCode" placeholder="شركت ....">
@@ -26,52 +30,105 @@
                 <input id="benef" type="text" class="inputCode" placeholder="شركت ....">
                 <img src="/img/icons8-edit-64.png" alt="" class="profile-picture">
             </div>
+            <label>سريال صورتحساب </label>
+            <input id="invoiceSerial" type="text" class="inputCode" placeholder="">
+            <label>شماره منحصر به فرد مالياتي صورتحساب مرجع </label>
+            <input id="uniqueNo" type="text" class="inputCode" placeholder="">
+            <label>الگوي صورتحساب </label>
+            <input id="invoicePattern" type="text" class="inputCode" placeholder="">
+            <label>موضوع صورتحساب </label>
+            <input id="remark" type="text" class="inputCode" placeholder="">
+           <label>كد فراگير </label>
+            <input id="code" type="text" class="inputCode" placeholder="">
+           <label>مجموع قبل تخفيف </label>
+            <input id="sumBeforeDiscount" type="text" class="inputCode" placeholder="">
+           <label>مجموع بعد تخفيف </label>
+            <input id="sumAfterDiscount" type="text" class="inputCode" placeholder="">
+           <label>مجموع ماليات بر ارزش افزوده </label>
+            <input id="sumTax" type="text" class="inputCode" placeholder="">
+           <label>مجموع ساير ماليات/عوارض و وجوه قانوني </label>
+            <input id="sumOtherTax" type="text" class="inputCode" placeholder="">
+           <label>مجموع </label>
+            <input id="sum" type="text" class="inputCode" placeholder="">
+           <label>روش تسويه </label>
+            <input id="collectRecmanType" type="text" class="inputCode" placeholder="">
+           <label>مبلغ پرداختي نقدي </label>
+            <input id="cashPaymentAmount" type="text" class="inputCode" placeholder="">
+
             <table class="content-table">
                 <thead>
                     <tr>
                         <th>رديف</th>
-                        <th>شناسه كالا</th>
-                        <th>شرح كالا</th>
-                        <th>تعداد</th>
-                        <th>في</th>
-                        <th>مبلغ</th>
+                        <th>شناسه كالا/خدمت</th>
+                        <th>تعداد/مقدار</th>
+                        <th>مبلغ واحد</th>
+                        <th>مبلغ قبل از تخفيف</th>
                         <th>تخفيف</th>
-                        <th>ماليات</th>
+                        <th>مبلغ بعد از تخفيف</th>
+                        <th>نرخ ماليات بر ارزش افزوده</th>
+                        <th>مبلغ ماليات بر ارزش افزوده</th>
+                        <th>موضوعات ساير ماليات و عوارض</th>
+                        <th>نرخ ساير ماليات و عوارض</th>
+                        <th>مبلغ ساير ماليات و عوارض</th>
+                        <th>موضوع ساير وجوه قانوني</th>
+                        <th>نرخ ساير وجوه قانوني</th>
+                        <th>مبلغ ساير وجوه قانوني</th>
                         <th>مبلغ كل</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
                         <td>1</td>
-                        <td><input id="row" type="text" class="inputCode" placeholder="شناسه كالا ...."></td>
-                        <td><input id="goodsRef" type="text" class="inputCode" placeholder="ساعت سيكو ...."></td>
-                        <td><input id="goodsName" type="text" class="inputCode" placeholder="1"></td>
+                        <td><input id="goodsRef" type="text" class="inputCode" placeholder="شناسه كالا ...."></td>
                         <td><input id="qty" type="text" class="inputCode" placeholder="1"></td>
-                        <td><input id="benef" type="text" class="inputCode" placeholder="10_000_000"></td>
-                        <td><input id="benef" type="text" class="inputCode" placeholder="50_000"></td>
-                        <td>90,000</td>
+                        <td><input id="amount" type="text" class="inputCode" placeholder="10_000_000"></td>
+                        <td><input id="beforeDiscountAmount" type="text" class="inputCode" placeholder="10_000_000"></td>
+                        <td><input id="discount" type="text" class="inputCode" placeholder="10_000_000"></td>
+                        <td><input id="afterDiscountAmount" type="text" class="inputCode" placeholder="10_000_000"></td>
+                        <td><input id="taxRate" type="text" class="inputCode" placeholder="10_000_000"></td>
+                        <td><input id="taxAmount" type="text" class="inputCode" placeholder="10_000_000"></td>
+                        <td><input id="otherTaxSubject" type="text" class="inputCode" placeholder="10_000_000"></td>
+                        <td><input id="otherTaxRate" type="text" class="inputCode" placeholder="10_000_000"></td>
+                        <td><input id="otherTaxAmount" type="text" class="inputCode" placeholder="10_000_000"></td>
+                        <td><input id="legalFundsSubject" type="text" class="inputCode" placeholder="10_000_000"></td>
+                        <td><input id="legalFundsRate" type="text" class="inputCode" placeholder="10_000_000"></td>
+                        <td><input id="legalFundsAmount" type="text" class="inputCode" placeholder="10_000_000"></td>
                         <td>855,000,000,000</td>
                     </tr>
                     <tr>
                         <td>2</td>
-                        <td><input id="row" type="text" class="inputCode" placeholder="شناسه كالا ...."></td>
-                        <td><input id="goodsRef" type="text" class="inputCode" placeholder="ساعت سواج ...."></td>
-                        <td><input id="goodsName" type="text" class="inputCode" placeholder="1"></td>
+                        <td><input id="goodsRef" type="text" class="inputCode" placeholder="شناسه كالا ...."></td>
                         <td><input id="qty" type="text" class="inputCode" placeholder="1"></td>
-                        <td><input id="benef" type="text" class="inputCode" placeholder="20_000_000"></td>
-                        <td><input id="benef" type="text" class="inputCode" placeholder="100_000"></td>
-                        <td>180,000</td>
+                        <td><input id="amount" type="text" class="inputCode" placeholder="10_000_000"></td>
+                        <td><input id="beforeDiscountAmount" type="text" class="inputCode" placeholder="10_000_000"></td>
+                        <td><input id="discount" type="text" class="inputCode" placeholder="10_000_000"></td>
+                        <td><input id="afterDiscountAmount" type="text" class="inputCode" placeholder="10_000_000"></td>
+                        <td><input id="taxRate" type="text" class="inputCode" placeholder="10_000_000"></td>
+                        <td><input id="taxAmount" type="text" class="inputCode" placeholder="10_000_000"></td>
+                        <td><input id="otherTaxSubject" type="text" class="inputCode" placeholder="10_000_000"></td>
+                        <td><input id="otherTaxRate" type="text" class="inputCode" placeholder="10_000_000"></td>
+                        <td><input id="otherTaxAmount" type="text" class="inputCode" placeholder="10_000_000"></td>
+                        <td><input id="legalFundsSubject" type="text" class="inputCode" placeholder="10_000_000"></td>
+                        <td><input id="legalFundsRate" type="text" class="inputCode" placeholder="10_000_000"></td>
+                        <td><input id="legalFundsAmount" type="text" class="inputCode" placeholder="10_000_000"></td>
                         <td>1,710,000,000,000</td>
                     </tr>
                     <tr>
                         <td>3</td>
-                        <td><input id="row" type="text" class="inputCode" placeholder="شناسه كالا ...."></td>
-                        <td><input id="goodsRef" type="text" class="inputCode" placeholder="ساعت سواج ضد آب  ...."></td>
-                        <td><input id="goodsName" type="text" class="inputCode" placeholder="2"></td>
+                        <td><input id="goodsRef" type="text" class="inputCode" placeholder="شناسه كالا ...."></td>
                         <td><input id="qty" type="text" class="inputCode" placeholder="1"></td>
-                        <td><input id="benef" type="text" class="inputCode" placeholder="200_000_000"></td>
-                        <td><input id="benef" type="text" class="inputCode" placeholder="1000_000"></td>
-                        <td>80,000</td>
+                        <td><input id="amount" type="text" class="inputCode" placeholder="10_000_000"></td>
+                        <td><input id="beforeDiscountAmount" type="text" class="inputCode" placeholder="10_000_000"></td>
+                        <td><input id="discount" type="text" class="inputCode" placeholder="10_000_000"></td>
+                        <td><input id="afterDiscountAmount" type="text" class="inputCode" placeholder="10_000_000"></td>
+                        <td><input id="taxRate" type="text" class="inputCode" placeholder="10_000_000"></td>
+                        <td><input id="taxAmount" type="text" class="inputCode" placeholder="10_000_000"></td>
+                        <td><input id="otherTaxSubject" type="text" class="inputCode" placeholder="10_000_000"></td>
+                        <td><input id="otherTaxRate" type="text" class="inputCode" placeholder="10_000_000"></td>
+                        <td><input id="otherTaxAmount" type="text" class="inputCode" placeholder="10_000_000"></td>
+                        <td><input id="legalFundsSubject" type="text" class="inputCode" placeholder="10_000_000"></td>
+                        <td><input id="legalFundsRate" type="text" class="inputCode" placeholder="10_000_000"></td>
+                        <td><input id="legalFundsAmount" type="text" class="inputCode" placeholder="10_000_000"></td>
                         <td>1,910,000,000,000</td>
                     </tr>
                 </tbody>
